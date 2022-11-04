@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+:root {
+
+  /* Font */
+  --ff: 'Barlow Semi Condensed', sans-serif;
+  --fs: 14px;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+
+  /* Colors */
+  --color-moderate-violet: hsl(263, 55%, 52%);
+  --color-light-graish-blue: hsl(210, 46%, 95%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: var(--fs);
+  font-weight: var(--fw-medium);
+}
+
+body {
+  font-family: var(--ff);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--color-light-graish-blue);
+}
+
+main {
+  min-width: 50rem;
+  padding: 2rem 0;
+}
+
+h1,
+h2 {
+  margin-bottom: 1rem;
+}
+
+h1 {
+  text-align: center;
+}
+
+.event-source {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+  justify-items: center;
+  margin-bottom: 2rem;
+}
+
+.source {
+  width: 10rem;
+  height: 3rem;
+  cursor: pointer;
+  text-align: center;
+  line-height: 2.7rem;
+  border-radius: 1.5rem;
+  transition: 0.2s;
+}
+
+.source:hover {
+  font-size: 1.2rem;
+  line-height: 2.7rem;
+}
+
+.item-red {
+  color: red;
+  border: 2px solid red;
+}
+
+.item-yellow {
+  color: rgb(205, 205, 50);
+  border: 2px solid rgb(205, 205, 50);
+}
+
+.item-green {
+  color: green;
+  border: 2px solid green;
+}
+
+.item-none {
+  color: grey;
+  border: 2px solid grey;
+}
+
+.event-bus {
+  width: 100%;
+  height: 3rem;
+  border: 2px solid var(--color-moderate-violet);
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.subscribers {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1rem;
+  justify-items: center;
+}
+
+.subscriber {
+  width: 5rem;
+  height: 5rem;
+  border: 1px solid var(--color-moderate-violet);
+  border-radius: 0.5rem;
+  text-align: center;
+  line-height: 5rem;
+}
+
+footer {
+  padding: 1rem;
+}
